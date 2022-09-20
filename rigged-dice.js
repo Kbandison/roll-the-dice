@@ -1,13 +1,13 @@
-'use strict';
 
 const prompt = require('prompt-sync')();
 
-let rigged = Number(prompt('What will your rigged number be?'));
+let rigged = prompt('What is your rigged number?');
 
-let random = Math.ceil(Math.random() * 6);
+let roll = Math.ceil(Math.random() * 7);
 
-console.log(random);
-
-if(random == rigged){
-  console.log('Matched!');
+console.log(`Actual Roll: ${roll}`);
+if (roll == 7){
+  console.log(rigged);
+} else {
+  console.log(roll);
 }
